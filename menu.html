@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Bar Demo</title>
+	<style type="text/css">
+		header { 
+			/*display: block;*/
+			position: absolute;
+
+			right: 10px;
+			top: 0;
+			left: 10px;
+
+		}
+		footer { 
+			display: block;
+			position: absolute;
+
+			right: 10px;
+			bottom: 0;
+			left: 10px;
+			/*padding: 1rem;*/
+			/*background-color: #efefef;*/
+			/*text-align: center;*/
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			/* background-color: #333; */
+			background-color: black;
+		}
+		
+		p1 {
+			font-family: "Courier New", Courier, monospace;
+		}
+
+		li {
+			font-family: "Courier New", Courier, monospace;
+			float: left;
+			border-right: 1px solid #bbb;
+		}
+
+
+
+		li a {
+			display: block;
+			/*			height: 40px;*/
+			color: white;
+			text-align: center;
+			padding: 25px;
+			text-decoration: none;
+		}
+
+
+		
+		li a:hover {
+			/* background-color: #111; */
+			background-color: indianred;
+		}
+		
+		.active {
+			background-color: red;
+		}
+		
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropbtn {
+
+			font-family: "Courier New", Courier;
+			background-color: black;
+			color: white;
+			/*
+			/*display: block;*/
+			text-align: center;
+			padding: 25px;
+
+			/*cursor: pointer;*/
+
+			/*background-color: black;*/
+			/*color: white;*/
+			/*padding: 16px;*/
+			font-size: 25px;
+			border: none;
+			/*cursor: pointer;*/
+			
+		}
+
+		.dropdown-content {
+			font-family: "Courier New", Courier;
+			display: none;
+			position: absolute;
+			background-color: black;
+			min-width: 150px;
+			/*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+		}
+
+		
+		.dropdown-content a {
+			font-family: "Courier New", Courier;
+			background-color: grey;
+			color: black;
+			padding: 14px;
+			text-decoration: none;
+			display: block;
+		}
+
+		
+		.dropdown-content a:hover {background-color: indianred;}
+
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		
+		.dropdown:hover .dropbtn {
+			background-color: #indianred;
+		}
+
+		.bc {
+			background-color: black;
+
+		}
+
+		/*button
+		{ width:225px;}*/
+
+
+		{
+			position:fixed
+			height:100%
+		}
+		
+	</style>
+
+
+
+
+</head>
+<body>
+
+	<!--******* COMMENTING OUT THE CURRENT MENU *********-->
+
+	<!-- <header>
+		<ul>
+
+
+			<li><a href="#home">AARDEEGRAPHY</a></li>
+			<li><a href="#news">TRAVEL</a></li>
+			<li><a href="#contact">USA</a></li>
+			<li><a href="#contact">NATIONAL PARKS</a></li>
+			<li><a href="#contact">EUROPE</a></li>
+			<ul style="float:right;list-style-type:none;">
+				<li><a class="active" href="#about">About</a></li>
+				<li><a href="#login">Login</a></li>
+			</ul>
+		</ul>
+	</header>
+	<br>
+-->
+
+<!-- ******** EXP CODE FOR DROPDOWN MENU********************** -->
+
+<header>
+	<div class="bc">
+		<div class="dropdown">
+			<button class="dropbtn">AARDEEGRAPHY</button>
+<!-- 		<div class="dropdown-content">
+			<a href="#">Link 1</a> 
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div> -->
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">TRAVEL</button>
+<!-- 		<div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div> -->
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">USA</button>
+		<div class="dropdown-content">
+			<a href="#">San Francisco</a>
+			<a href="#">New York</a>
+			<a href="#">Los Angeles</a>
+			<a href="#">Seattle</a>
+			<a href="#">Las Vegas</a>
+			<a href="#">Denver</a>
+		</div>
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">NATIONAL PARKS</button>
+		<div class="dropdown-content">
+			<a href="#">Yellowstone</a>
+			<a href="#">Yosemite</a>
+			<a href="#">Grand Canyon</a>
+		</div>
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">EUROPE</button>
+		<div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div>
+	</div>
+
+	<div class="dropdown">
+		<button class="dropbtn">ABOUT</button>
+	</div>
+
+
+
+	<!-- About and Login Buttons -->
+
+<!-- 	<div style="float:right">
+		<button class="dropbtn">About</button>
+
+		<button class="dropbtn">Login</button>
+	</div> -->
+
+</div>
+	<!-- ****************************** 
+	<ul style="float:right;list-style-type:none;">
+		<li><a class="active" href="#about">About</a></li>
+		<li><a href="#login">Login</a></li>
+	</ul>
+	************************** -->
+
+</header>
+
+	<!-- <div class="dropdown">
+	<button class="dropbtn">Dropdown</button>
+	<div class="dropdown-content">
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+	</div>
+</div> -->
+
+
+<footer>
+	<ul>
+		
+		<ul style="float:right;list-style-type:none;">
+			<li><a class="active" href="#about">About</a></li>
+			<li><a href="#login">Login</a></li>
+		</ul>
+	</uls>
+</footer>
+
+</body>
+</html>
