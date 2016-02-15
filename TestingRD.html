@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <style type="text/css">
+
+header { 
+      
+      position: fixed;
+      right: 10px;
+      top: 0;
+      left: 10px;
+
+    }
+
+
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body { 
+      margin:0;
+      padding:0;
+      perspective: 1px; /*necessary for proper scrolling of pics*/
+      /*transform-style: preserve-3d;*/
+      height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      font-family: Nunito;
+    }
+
+    h1 {
+     font-size: 150%;
+     position: absolute;
+   top: 500px;
+   left: 55px;
+   color:black;
+ 
+
+   }
+
+
+
+   .slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.7);
+    transform-style: inherit;
+    background-color: white;
+
+  }
+
+  /*img {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-100%) translateY(-94%) rotate(2deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(240,230,220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  }
+
+  img:last-of-type {
+    transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+  }*/
+
+  .slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+  }
+
+
+/*.title {
+  
+  width: 25%;
+  text-align: center;
+  padding: none;
+  border-radius: 5px;
+  background: rgba(24,23,22, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+} */
+
+/*.slide:nth-child(2n)  {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}*/
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+/*.header {
+  position: fixed;
+  right: 10px;
+  top: 0;
+  left: 10px;
+  
+}*/
+
+
+/*#title {
+  background-image: url("image_1.jpg");
+   background-attachment: fixed;  
+ }*/
+
+ #slide1:before {
+  background-image: url("Image_1.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide2 {
+  background-image: url("Image_2.jpg");
+  background-image: fixed;
+}	
+
+#slide3:before {
+  background-image: url("Image_3.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+#slide4 {
+  background-image: url("Image_4.jpg");
+  /*transform: translateZ(-1px) scale(2);
+  z-index:-1;*/
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+
+  font-family: "Courier New", Courier;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  border: none;
+
+}
+
+.dropbtn:hover {
+  background-color: #4d0019;
+}
+
+.dropdown-content {
+  font-family: "Courier New", Courier;
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+}
+
+
+
+.dropdown-content a {
+  font-family: "Courier New", Courier;
+  font-size: 14px;
+  background-color: #8c8c8c;
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+  display: block;
+
+}
+}
+
+
+.dropdown-content a:hover {background-color: #808080;}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: #4d0019;
+}
+
+.bc {
+  background-color: black;
+
+}
+
+.bc1 {
+  background-color: black;
+
+}
+
+{
+  position:fixed
+  height:100%
+}
+
+/************For TOP MENU DROPDOWN BUTTONS *****************/
+
+/************For AARDEEGRAPHY BUTTON *****************/
+
+.dropbtn1 {
+
+  font-family: "Courier New", Courier;
+  background-color: #4d0019;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  border: none;
+
+}
+
+/************For AARDEEGRAPHY BUTTON *****************/
+
+
+/************For LONG MENU AUTOSCROLL *****************/
+.scroll
+{
+  max-height: 510px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/************For LONG MENU AUTOSCROLL *****************/
+
+
+.dropbtn2 {
+
+  font-family: "Courier New", Courier;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+
+}
+
+.dropbtn2:hover {
+  background-color: black;
+}
+
+
+/*header { 
+      
+      position: fixed;
+      right: 10px;
+      top: 0;
+      left: 10px;
+
+    }*/
+
+    footer { 
+      display: block;
+      
+
+      right: 10px;
+      bottom: 0;
+      left: 10px;
+      top: auto;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+    
+    p1 {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    li {
+      font-family: "Courier New", Courier, monospace;
+      float: left;
+      border-right: 1px solid #bbb;
+    }
+
+
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 7px;
+      text-decoration: none;
+    }
+
+
+    
+    li a:hover {
+      background-color: #4d0019;
+    }
+    
+    .active {
+      background-color: black;
+    }
+
+    .fixed
+    {
+      position: fixed;
+      right: 10px;
+      top: 0;
+      left: 10px;
+    }
+  </style>
+
+
+
+</head>
+<body>
+  <div align="center" style="background-color: black;">
+
+
+  <!-- <header>  -->
+
+    <div class="bc">
+
+      <div class="dropdown">
+      
+        <button class="dropbtn1">AARDEEGRAPHY</button>
+
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">NORTH AMERICA</button>
+        <div class="dropdown-content">
+          <a href="#">San Francisco</a>
+          <a href="#">New York</a>
+          <a href="#">Los Angeles</a>
+          <a href="#">Seattle</a>
+          <a href="#">Las Vegas</a>
+          <a href="#">Denver</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">SOUTH AMERICA</button>
+        <div class="dropdown-content">
+          <a href="#">Buenos Aires</a>
+          <a href="#">Santiago</a>
+          <a href="#">Lima</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">NATIONAL PARKS</button>
+        <div class="dropdown-content">
+          <div class="scroll">
+            <a href="#">Yellowstone</a>
+            <a href="#">Yosemite</a>
+            <a href="#">Grand Canyon</a>
+            <a href="#">Zion</a>
+            <a href="#">Bryce Canyon</a>
+            <a href="#">Canyonlands</a>
+            <a href="#">Kings Canyon and Sequoia</a>
+            <a href="#">Great Smoky Mountains</a>
+            <a href="#">Volcanoes</a>
+            <a href="#">Death Valley</a>
+            <a href="#">Crater Lake</a>
+            <a href="#">Mt. Rainier</a>
+            <a href="#">North Cascades</a>
+            <a href="#">Death Valley</a>
+            <a href="#">Crater Lake</a>
+            <a href="#">Mt. Rainier</a>
+            <a href="#">North Cascades</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"> EUROPE </button>
+        <div class="dropdown-content">
+          <a href="#">Berlin</a>
+          <a href="#">Munich</a>
+          <a href="#">Prague</a>
+          <a href="#">Amsterdam</a>
+          <a href="#">Brussels</a>
+          <a href="#">Paris</a>
+          <a href="#">Vienna</a>
+          <a href="#">Oslo</a>
+          <a href="#">Zurich</a>
+          <a href="#">London</a>
+          <a href="#">Rome</a>
+          <a href="#">Venice</a>
+
+
+        </div>
+      </div>
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">ABOUT</button>
+
+      </div>
+
+      <div class="dropdown">
+        <img src="Facebook.png" height="20" width="20" align="center"> 
+        <img src="Instagram.png" height="20" width="20" align="center">
+        <img src="LinkedIn.png" height="20" width="20" align="center"> 
+        <img src="Pinterest.png" height="20" width="20" align="center">
+        <img src="vine.png" height="20" width="20" align="center">
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- </header>  -->
+
+
+   <!-- <div class="slide header">
+  <h1>AARDEEGRAPHY</h1>
+</div> -->
+
+
+<div id="slide1"class="slide">
+  <!-- <div class="title"> -->
+  <h1>NEW YORK</h1>
+  <!-- <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p> -->
+</div>
+
+
+<div id="slide2" class="slide">
+  <!-- <div class="title"> -->
+  <h1>PARIS</h1>
+  <!-- <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p> -->
+</div> 
+  <!-- <img src="image_1.jpg">
+  <img src="image_2.jpg">  -->
+
+
+  <div id="slide3" class="slide">
+    <!-- <div class="title"> -->
+    <h1>BERLIN</h1>
+    <!-- <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p> -->
+  </div>
+
+
+  <div id="slide4" class="slide">
+    <h1>PRAGUE</h1>
+  </div>
+  
+
+</body>
+</html>

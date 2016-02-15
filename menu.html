@@ -3,36 +3,45 @@
 <html>
 <head>
 	<title>Menu Bar Demo</title>
-	<style type="text/css">
-		header { 
-			/*display: block;*/
-			position: fixed;
-			/*overflow: visible;*/
+<!--SEARCH BUTTON-
+ <style type="text/css">
+        .button-search{
+            background-image:url('/images/searchIcon.png');
+            width:50px;
+            height:20px;
 
+        }
+        .button-search:hover {
+           background-image:url('/iimages/searchIconHover.png');   
+        }
+    </style>  -->
+
+
+	<style type="text/css">
+		
+		header { 
+			
+			position: fixed;
 			right: 10px;
 			top: 0;
 			left: 10px;
 
 		}
+
 		footer { 
 			display: block;
-			/*position: fixed;*/
+			
 
 			right: 10px;
 			bottom: 0;
 			left: 10px;
 			top: auto;
-
-			/*padding: 1rem;*/
-			/*background-color: #efefef;*/
-			/*text-align: center;*/
 		}
 		ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-			/* background-color: #333; */
 			background-color: black;
 		}
 		
@@ -50,7 +59,6 @@
 
 		li a {
 			display: block;
-			/*			height: 40px;*/
 			color: white;
 			text-align: center;
 			padding: 7px;
@@ -60,7 +68,6 @@
 
 		
 		li a:hover {
-			/* background-color: #111; */
 			background-color: #4d0019;
 		}
 		
@@ -68,6 +75,8 @@
 			background-color: black;
 		}
 		
+		/************For TOP MENU DROPDOWN CLASSES *****************/
+
 		.dropdown {
 			position: relative;
 			display: inline-block;
@@ -78,19 +87,9 @@
 			font-family: "Courier New", Courier;
 			background-color: black;
 			color: white;
-			/*
-			/*display: block;*/
-			text-align: center;
 			padding: 20px;
-
-			/*cursor: pointer;*/
-
-			/*background-color: black;*/
-			/*color: white;*/
-			/*padding: 16px;*/
 			font-size: 20px;
 			border: none;
-			/*cursor: pointer;*/
 			
 		}
 
@@ -104,59 +103,98 @@
 			position: absolute;
 			background-color: black;
 			width: 100%;
+			text-align: center;
+
 			/*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 		}
 
 
-.dropbtn1 {
-
-			font-family: "Courier New", Courier;
-			background-color: #4d0019;
-			color: white;
-			text-align: center;
-			padding: 20px;
-			font-size: 20px;
-			border: none;
-			
-		}
 		
 		.dropdown-content a {
 			font-family: "Courier New", Courier;
+			font-size: 14px;
 			background-color: #8c8c8c;
 			color: white;
 			padding: 14px;
 			text-decoration: none;
 			display: block;
-		}
-
-		
-		.dropdown-content a:hover {background-color: #808080;}
-
-		
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
-
-		
-		.dropdown:hover .dropbtn {
-			background-color: #4d0019;
-		}
-
-		.bc {
-			background-color: black;
 
 		}
-
-		/*button
-		{ width:225px;}*/
+	}
 
 
-		{
-			position:fixed
-			height:100%
-		}
-		
-	</style>
+	.dropdown-content a:hover {background-color: #808080;}
+
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+
+	.dropdown:hover .dropbtn {
+		background-color: #4d0019;
+	}
+
+	.bc {
+		background-color: black;
+
+	}
+
+.bc1 {
+		background-color: black;
+
+	}
+
+	{
+		position:fixed
+		height:100%
+	}
+
+	/************For TOP MENU DROPDOWN BUTTONS *****************/
+
+	/************For AARDEEGRAPHY BUTTON *****************/
+
+	.dropbtn1 {
+
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: white;
+		text-align: center;
+		padding: 20px;
+		font-size: 20px;
+		border: none;
+
+	}
+
+	/************For AARDEEGRAPHY BUTTON *****************/
+
+
+	/************For LONG MENU AUTOSCROLL *****************/
+	.scroll
+	{
+		max-height: 510px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	/************For LONG MENU AUTOSCROLL *****************/
+
+
+	.dropbtn2 {
+
+		font-family: "Courier New", Courier;
+		background-color: black;
+		color: white;
+		padding: 20px;
+		font-size: 20px;
+		border: none;
+
+	}
+
+	.dropbtn2:hover {
+		background-color: black;
+	}
+
+</style>
 
 
 
@@ -164,47 +202,34 @@
 </head>
 <body>
 
-	<!--******* COMMENTING OUT THE CURRENT MENU *********-->
-
-	<!-- <header>
-		<ul>
 
 
-			<li><a href="#home">AARDEEGRAPHY</a></li>
-			<li><a href="#news">TRAVEL</a></li>
-			<li><a href="#contact">USA</a></li>
-			<li><a href="#contact">NATIONAL PARKS</a></li>
-			<li><a href="#contact">EUROPE</a></li>
-			<ul style="float:right;list-style-type:none;">
-				<li><a class="active" href="#about">About</a></li>
-				<li><a href="#login">Login</a></li>
-			</ul>
-		</ul>
-	</header>
-	<br>
--->
 
-<!-- ******** EXP CODE FOR DROPDOWN MENU********************** -->
-<div align="center" style="background-color: black;">
-	<header>
-		<div class="bc">
-			<div class="dropdown">
-				<button class="dropbtn1">AARDEEGRAPHY</button>
-<!-- 		<div class="dropdown-content">
-			<a href="#">Link 1</a> 
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</div> -->
+
+	<!-- ******** FOR DROPDOWN MENU********************** -->
+
+
+
+	<div align="center" style="background-color: black;">
+	
+		
+		<header>
+
+	
+<div id="searchwrap">
+    <li id="search">
+       <form id="search-form" name="search" action="/products" method="get">
+        <input id="search-input" name="search" type="text">
+        <input type="submit" class="button-search" value="search" />
+      </form>
+    </li>
+   </div>
+
+<div class="bc">
+	<div class="dropdown">
+		<button class="dropbtn1">AARDEEGRAPHY</button>
+
 	</div>
-
-	<!-- <div class="dropdown">
-		<button class="dropbtn">TRAVEL</button>
-		<div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</div>
-	</div> -->
 
 	<div class="dropdown">
 		<button class="dropbtn">NORTH AMERICA</button>
@@ -231,14 +256,31 @@
 	<div class="dropdown">
 		<button class="dropbtn">NATIONAL PARKS</button>
 		<div class="dropdown-content">
-			<a href="#">Yellowstone</a>
-			<a href="#">Yosemite</a>
-			<a href="#">Grand Canyon</a>
+			<div class="scroll">
+				<a href="#">Yellowstone</a>
+				<a href="#">Yosemite</a>
+				<a href="#">Grand Canyon</a>
+				<a href="#">Zion</a>
+				<a href="#">Bryce Canyon</a>
+				<a href="#">Canyonlands</a>
+				<a href="#">Kings Canyon and Sequoia</a>
+				<a href="#">Great Smoky Mountains</a>
+				<a href="#">Volcanoes</a>
+				<a href="#">Death Valley</a>
+				<a href="#">Crater Lake</a>
+				<a href="#">Mt. Rainier</a>
+				<a href="#">North Cascades</a>
+				<a href="#">Death Valley</a>
+				<a href="#">Crater Lake</a>
+				<a href="#">Mt. Rainier</a>
+				<a href="#">North Cascades</a>
+			</div>
+
 		</div>
 	</div>
 
 	<div class="dropdown">
-		<button class="dropbtn">EUROPE</button>
+		<button class="dropbtn"> EUROPE </button>
 		<div class="dropdown-content">
 			<a href="#">Berlin</a>
 			<a href="#">Munich</a>
@@ -250,56 +292,74 @@
 			<a href="#">Oslo</a>
 			<a href="#">Zurich</a>
 			<a href="#">London</a>
+			<a href="#">Rome</a>
+			<a href="#">Venice</a>
+
+
 		</div>
 	</div>
 
+
+
 	<div class="dropdown">
 		<button class="dropbtn">ABOUT</button>
+
+	</div>
+
+	<div class="dropdown">
+		<img src="images/Facebook.png" height="20" width="20" align="center"> 
+		<img src="images/Instagram.png" height="20" width="20" align="center">
+		<img src="images/LinkedIn.png" height="20" width="20" align="center"> 
+		<img src="images/Pinterest.png" height="20" width="20" align="center">
+		<img src="images/vine.png" height="20" width="20" align="center">
 	</div>
 
 
-
-	<!-- About and Login Buttons -->
-
-<!-- 	<div style="float:right">
-		<button class="dropbtn">About</button>
-
-		<button class="dropbtn">Login</button>
-	</div> -->
-
 </div>
-	<!-- ****************************** 
-	<ul style="float:right;list-style-type:none;">
-		<li><a class="active" href="#about">About</a></li>
-		<li><a href="#login">Login</a></li>
-	</ul>
-	************************** -->
+
 
 </header>
 
 
-	<!-- <div class="dropdown">
-	<button class="dropbtn">Dropdown</button>
-	<div class="dropdown-content">
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-	</div>
-</div> -->
+
 <br>
+<!--Javascript for slideshow-->
+<div align="right">
+
+			<script language="JavaScript"> 
+				var i = 0; var path = new Array(); 
+
+// LIST OF IMAGES 
+path[0] = "image_1.jpg"; 
+path[1] = "image_2.jpg"; 
+// path[2] = "image_3.jpg"; 
+
+function swapImage() 
+{ 
+	document.slide.src = path[i]; 
+	if(i < path.length - 1) i++; 
+	else i = 0; 
+	setTimeout("swapImage()",3000); 
+} 
+window.onload=swapImage; 
+</script> 
+<img height="800" name="slide" src="image_1.jpg" width="1300" />
+
+</div>
+
+<!--Javascript for slideshow-->
 
 
-
-<img src="P1000041-2-1-2.jpg" height="900" width="1300"><br>
+<!-- <img src="images/DSCF9572.jpg" height="900" width="1300"><br> -->
 
 </div>
 
 <footer>
 	<ul>
-		
+
 		<ul style="float:right;list-style-type:none;">
 			<li><a class="active" href="#about">CONTACT US</a></li>
-			<li><a href="#login">&copy; aardeegraphyinc</a></li>
+			<li><a href="#login">&copy; aardeegraphy inc</a></li>
 		</ul>
 	</uls>
 </footer>
